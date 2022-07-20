@@ -4,14 +4,19 @@
 #猜錯的話 要告訴他 比答案大或小
 
 #延伸: 印出總共猜幾次
+#延伸2: 讓使用者自行決定範圍值
 
 import random
+start = input('請決定隨機數字範圍開始值:')
+end = input('請決定隨機數字範圍結束值:')
+start = int(start) #因input出來的值為字串，故使用int做型態轉換
+end = int(end)
 count = 0
+r = random.randint(start, end)
 
-r = random.randint(1, 100)
 while True:
 	count += 1 # count = count + 1
-	num = input('請猜猜看,一個數字')
+	num = input('請猜猜看,一個數字:')
 	num = int(num) #input會強迫答案變成字串,因此要使用型態轉換
 	if num == r:
 		print('終於猜對了,您一共猜了', count, '次')
