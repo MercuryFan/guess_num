@@ -14,7 +14,7 @@ while True:
 	num = input('請猜猜看,一個數字')
 	num = int(num) #input會強迫答案變成字串,因此要使用型態轉換
 	if num == r:
-		print('終於猜對了,您一共猜了', i, '次')
+		print('終於猜對了,您一共猜了', count, '次')
 		break
 	elif num > r:
 		print('比答案大,在往小點猜')
